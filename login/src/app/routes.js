@@ -12,7 +12,7 @@ module.exports = (app, passport) => {
     });
 
     app.post("/login", passport.authenticate("local-login", {
-        successRedirect: "/profile",
+        successRedirect: "/principal",
         failureRedirect: "/login",
         failureFlash: true
     }));
@@ -24,7 +24,7 @@ module.exports = (app, passport) => {
     })
 
     app.post("/signup", passport.authenticate("local-signup", {
-        successRedirect: "/profile",
+        successRedirect: "/principal",
         failureRedirect: "/signup",
         failureFlash: true
     }));
@@ -38,6 +38,10 @@ module.exports = (app, passport) => {
     app.get("/logout", (req, res) => {
         req.logout();
         res.redirect("/");
+    });
+
+    app.get("/principal", isLoggedIn, (req, res) => {
+        res.render("principal");
     });
 };
 
