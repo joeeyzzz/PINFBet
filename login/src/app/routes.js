@@ -29,6 +29,14 @@ module.exports = (app, passport) => {
         failureFlash: true
     }));
 
+    app.get("/apuestas", passport.authenticate("local-signup", {
+        successRedirect: "/apuestas",
+        failureRedirect: "/signup",
+        failureFlash: true
+    }));
+
+    
+
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
             user: req.user

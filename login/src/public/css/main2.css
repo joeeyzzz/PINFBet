@@ -17,41 +17,28 @@ body{
     margin-right: auto;
     display: block;
 }
-/*  position: relative;
-    animation-name: mianimacion;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes mianimacion {
-
-  from{
-      left:0px;
-  }
-  to{
-      left:670px;
-  }
-}*/
 
 div {
-    width: 100px;
-    height: 50px;
+    overflow: hidden;
+    border-radius: 500px;
+    width: 60px;
+    height: 48px;
     background: #03bb03;
     color: white;
     font-weight: bold;
-    -webkit-transition: width 1s, background 1s;
-    -moz-transition: width 1s, background 1s;
-    -o-transition: width 1s, background 1s;
-    transition: width 1s, background 1s;
+    -webkit-transition: width 0.5s, background 1s;
+    -moz-transition: width 0.5s, background 1s;
+    -o-transition: width 0.5s, background 1s;
+    transition: width 0.5s, background 1s;
     padding: 10px;
     margin: 10px;
 }
 
 #div1 {
-    -webkit-transition-timing-function: linear;
-    -moz-transition-timing-function: linear;
-    -o-transition-timing-function: linear;
-    transition-timing-function: linear;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 #div2 {
     -webkit-transition-timing-function: ease;
@@ -60,16 +47,16 @@ div {
     transition-timing-function: ease;
 }
 #div3 {
-    -webkit-transition-timing-function: ease-in;
-    -moz-transition-timing-function: ease-in;
-    -o-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 #div4 {
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
 div:hover {
