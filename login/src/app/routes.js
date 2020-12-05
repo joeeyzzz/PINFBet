@@ -54,6 +54,11 @@ module.exports = (app, passport) => {
         res.render("chat");
     });
 
+    app.get("/chat", isLoggedIn, (req, res)=>{
+        res.render("chat");
+
+    });
+
 }
 
 function isLoggedIn(req, res, next) {
