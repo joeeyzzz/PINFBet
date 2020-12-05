@@ -29,11 +29,11 @@ module.exports = (app, passport) => {
         failureFlash: true
     }));
 
-    app.get("/apuestas", passport.authenticate("local-signup", {
-        successRedirect: "/apuestas",
-        failureRedirect: "/signup",
-        failureFlash: true
-    }));
+    app.get("/apuestas", (req,res) => {
+        res.render("apuestas", {
+            message: req.flash("signupMessage")
+        })
+    })
 
     
 
