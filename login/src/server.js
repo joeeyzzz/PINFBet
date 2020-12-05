@@ -10,8 +10,9 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const { stringify } = require('querystring');
-
+const io = require('socket.io')(3000);
 const {url} = require("./config/database");
+const users = {};
 
 mongoose.connect(url);
 
@@ -71,3 +72,18 @@ app.post('/subscribe', async (req, res) => {
   // If successful
   return res.json({ success: true, msg: 'Captcha passed' });
 });
+
+//CHAT
+io.on('connection', socket => {
+  socket.on('new-user', name => {
+    users[socket.id] = name
+    socket.broadcast.emit('user-connected', name)
+  })
+  socket.on('send-chat-message', message => {
+    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
+  })
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-disconnected', users[socket.id])
+    delete users[socket.id]
+  })
+})
