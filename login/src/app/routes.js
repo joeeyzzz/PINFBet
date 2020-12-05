@@ -35,7 +35,17 @@ module.exports = (app, passport) => {
         })
     })
 
-    
+    app.get("/chat", (req,res) => {
+        res.render("chat", {
+            message: req.flash("signupMessage")
+        })
+    })
+
+    app.get("/acercade", (req,res) => {
+        res.render("acercade", {
+            message: req.flash("signupMessage")
+        })
+    })
 
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
