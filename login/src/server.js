@@ -10,8 +10,8 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const { stringify } = require('querystring');
-const {url} = require("./config/database");
 
+const {url} = require("./config/database");
 
 mongoose.connect(url);
 
@@ -71,4 +71,3 @@ app.post('/subscribe', async (req, res) => {
   // If successful
   return res.json({ success: true, msg: 'Captcha passed' });
 });
-

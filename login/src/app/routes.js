@@ -35,6 +35,8 @@ module.exports = (app, passport) => {
         failureFlash: true
     }));
 
+    
+
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
             user: req.user
@@ -49,17 +51,7 @@ module.exports = (app, passport) => {
     app.get("/principal", isLoggedIn, (req, res) => {
         res.render("principal");
     });
-
-    app.get("/chat", isLoggedIn, (req, res) => {
-        res.render("chat");
-    });
-
-    app.get("/chat", isLoggedIn, (req, res)=>{
-        res.render("chat");
-
-    });
-
-}
+};
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
