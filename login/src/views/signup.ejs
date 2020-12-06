@@ -26,7 +26,7 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h1 class="text-center">
-                            <span class="fa fa-sign-in"></span> Regístrate en PINFBet
+                            <span class="fa fa-sign-in"></span> Regístrate en PINFBET
                         </h1>
 
                         <% if(message.length > 0) { %>
@@ -38,17 +38,40 @@
 
                         <form action="/signup" method="post" onsubmit="return miFuncion(this)">
                             <div class= "form-group">
+                                <label for="name"> Nombre y Apellidos </label>
+                                <input type="name" name="name" class="form-control" placeholder="Introduzca nombre" required>
+                            </div>
+                            <div class= "form-group">
                                 <label for="email"> Correo electrónico </label>
-                                <input type="email" name="email" class="form-control" required>
+                                <input type="email" name="email" class="form-control" placeholder="Introduzca correo" required>
+                                <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con otras personas.</small>
+                            </div>
+                            <div class= "form-group">
+                                <label for="nickname"> Usuario </label>
+                                <input type="nickname" name="nickname" class="form-control" placeholder="Introduzca usuario" required>
                             </div>
                             <div class= "form-group">
                                 <label for="password"> Contraseña </label>
-                                <input type="password" name="password" class="form-control" required>
+                                <input type="password" name="password" class="form-control" placeholder="Introduzca contraseña" required>
                             </div>
                             <div class= "form-group">
                                 <label for="date"> Fecha de nacimiento </label>
                                 <input type="date" id="miEdad" name="date" class="form-control" required>
                             </div>
+                            <div class="form-row align-items-center">
+                                <div class="col-auto my-1">
+                                  <label class="mr-sm-2" for="inlineFormCustomSelect">Años matriculados</label>
+                                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6 o más</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <p></p>
                             <div class="form-group"> 
                                 <div
                                   class="g-recaptcha"
