@@ -1,2 +1,73 @@
 <!DOCTYPE html>
 <html lang=es>
+<head>
+    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css" >
+    <!--Socket.io scirpt-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <title>Simple Chat App</title>
+</head>
+
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1 class="modal-title">¿Cuál es tu usuario?</h1>
+            <input id="nickname-input" class="custom-input" type="text" />
+        </div>
+
+    </div>
+
+    <!--Big wrapper-->
+    <div class="big-wrapper">
+        <!-- Left Column-->
+        <div class="online-user-wrapper">
+            <div class="online-user-header-container">
+                <header>
+                    <h2>Usuarios conectados</h2>
+                </header>
+            </div>
+            <div>
+                <!--Online users goes here-->
+                <ul id="users-list">
+
+                </ul>
+            </div>
+        </div>
+        <!--Chat Wrapper -->
+        <div class="chat-wrapper">
+            <div class="super-chat-title-container">
+                <header>
+                    <h1> Chat PINFBET</h1>
+                </header>
+            </div>
+
+            
+            <div class="chat-vuelta-principal" >
+                <a href="/principal" style="color: white; margin-left: 7px; text-decoration: none;"> Volver</a>
+            </div>
+
+            <!--Messages container-->
+            <div id="chatroom">
+                <!--x is typing goes here-->
+                <div id="feedback"></div>
+            </div>
+
+            <!-- Input zone -->
+            <div id="input_zone">
+                <input id="message" class="vertical-align custom-input" type="text">
+                <button id="send_message"  class="vertical-align btn" type=" submit">Enviar</button>
+            </div>
+
+        </div>
+    </div>
+    <!--jQuery script-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--Scripts-->
+    <script   src="/js/chat.js"></script>
+    <script   src="/js/modalScript.js"></script>
+</body>
+</html>
