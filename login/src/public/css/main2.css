@@ -40,24 +40,6 @@ div {
     -o-transition-timing-function: ease;
     transition-timing-function: ease;
 }
-#div2 {
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-}
-#div3 {
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-}
-#div4 {
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-}
 
 div:hover {
     width: 300px;
