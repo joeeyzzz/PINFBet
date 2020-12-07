@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(205, 255, 224);
+}
+
+.contenedor{
+    width: 1000px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+.cuadro{
+    background-color: white;
+}
+
+header{
+    background: rgb(1, 182, 253);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    border-bottom: 3px dashed black;
+}
+
+.pregunta1{
+    color: rgb(225, 0, 255);
+}
+
+.creadores{
+    text-align: center;
+    height: 120px;
+}
+
+.pregunta2{
+    color: rgb(225, 0, 255);
+}
+
+.ofrecemos{
+    text-align: center;
+    height: 200px;
+}
+
+.pregunta3{
+    color: rgb(225, 0, 255);
+}
+
+.probarnos{
+    text-align: center;
+    height: 120px;
+}
+
+.contactanos{
+    color: rgb(225, 0, 255);
+}
+
+.contacto{
+    text-align: center;
+}
