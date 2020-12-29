@@ -8,7 +8,7 @@
 body{
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
-    background: rgb(205, 255, 224);
+    background: url("../fondo1.jpg");
 }
 
 #titulo{
