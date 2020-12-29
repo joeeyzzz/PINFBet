@@ -10,9 +10,22 @@
 }
 
 .apuestas {
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
     background: url("../fondo1.jpg");
 }
 
-body {
+body{
     background: url("../fondo1.jpg");
+}
+
+#body_apuestas{
+    margin-left: 2cm;
+    font-size: 0.4cm;
+    font-weight: bold;
+}
+
+#apuestas_titulo{
+    font-size: 1cm;
+    font-family: 'Courier New', Courier, monospace;
 }

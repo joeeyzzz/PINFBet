@@ -1,5 +1,4 @@
 let monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre', 'Noviembre', 'Diciembre'];
-
 let currentDate = new Date();
 let currentDay = currentDate.getDate();
 let monthNumber = currentDate.getMonth();
@@ -27,7 +26,7 @@ const writeMonth = (month) => {
             ${getTotalDays(monthNumber-1)-(i-1)}
         </div>`;
     }
-
+    
     for(let i=1; i<=getTotalDays(month); i++){
         if(i===currentDay) {
             dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today">${i}</div>`;
