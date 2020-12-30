@@ -14,218 +14,405 @@
         crossorigin="anonymous"
     />
 </head>
-<br>
-    <b id="apuestas_titulo">
-        <center>Apuesta en PINFBET</center>
-    </b>
-</br>
 <body id="body_apuestas">
-    <b></b>
-    <b></b>
-    <form action="/apuestas" method="POST">
-        <div class="form-row align-items-center">
-            <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-                    <optgroup label="1º Curso">
-                        <option value="CAL" label="Cálculo"></option>
-                        <option value="IG" label="Infórmatica General"></option>
-                        <option value="IP" label="Introducción a la Programación"></option>
-                        <option value="MD" label="Matemática Discreta"></option>
-                        <option value="SDIG" label="Sistemas Digitales"></option>
 
-                        <option value="EST" label="Estádistica"></option>
-                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Fundamentos Físicos y Electronicos de la Informática</a></li>
-                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Fundamentos y Estructuras de Computadores</a></li>
-                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Metodología de la Programación</a></li>
-                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Álgebra</a></li>
-                    </optgroup>
-                </select>
-                <button type="submit" class="btn btn-primary my-1">Apostar</button>
+    <div class="apuesta1">
+        <h1>Apuesta en PinfBet</h1>
+    </div>
+   
+    <div class="container">
+    
+        <form action="/apuestas" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                        <optgroup label="1º Curso">
+                            <option value="CAL" label="Cálculo"></option>
+                            <option value="IG" label="Infórmatica General"></option>
+                            <option value="IP" label="Introducción a la Programación"></option>
+                            <option value="MD" label="Matemática Discreta"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+
+                            <option value="EST" label="Estádistica"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                        </optgroup>
+                    
+                        <optgroup label="2º Curso"> 
+                            <option value="AAED" label="Análisis de Algoritmos y Estructura de Datos"></option>
+                            <option value="AC" label="Arquitectura de Computadores"></option>
+                            <option value="OGE" label="Organización y Gestión de Empresas"></option>
+                            <option value="RC" label="Redes de Computadores"></option>
+                            <option value="SO" label="Sistemas Operativos"></option>
+
+                            <option value="BD" label="Bases de Datos"></option>
+                            <option value="EDNL" label="Estructura de datos no lineales"></option>
+                            <option value="IS" label="Ingeniería del Software"></option>
+                            <option value="POO" label="Programación Orientada a Objetos"></option>
+                            <option value="SD" label="Sistemas Distribuidos"></option>
+                        </optgroup>
+
+                        <optgroup label="3º Curso"> 
+                            <option value="DA" label="Diseño de Algoritmos"></option>
+                            <option value="IA" label="Inteligencia Artificial"></option>
+                            <option value="PCTR" label="Programación Concurrida en Tiempo Real"></option>
+                            <option value="PINF" label="Proyectos Informáticos"></option>
+                            <option value="SSI" label="Seguridad en los Sistemas Informaticos"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (3º Curso)"> 
+                            <option value="MC" label="Modelos de Computación"></option>
+                            <option value="RP" label="Reconocimiento de Patrones"></option>
+                            <option value="SI" label="Sistemas Inteligentes"></option>
+                            <option value="TALF" label="Teoría de Autómatas y Lenguajes Formales"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (3º Curso)"> 
+                            <option value="DBM" label="Diseños Basados en Microprocesadores"></option>
+                            <option value="DCE" label="Diseño de Computadores Empotrados"></option>
+                            <option value="DRC" label="Diseño de Redes de Computadores"></option>
+                            <option value="TDC" label="Técnicas de Diseño de Computadores"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (3º Curso)"> 
+                            <option value="DSS" label="Diseño de Sistemas Software"></option>
+                            <option value="IISS" label="Implementación e Implantación de Sistemas Software"></option>
+                            <option value="IR" label="Ingeniería de Requisitos"></option>
+                            <option value="VVS" label="Verificación y Validación del Software"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (3º Curso)"> 
+                            <option value="DSH" label="Desarrollo de Sistemas Hipermedia"></option>
+                            <option value="PNET" label="Programación en Internet"></option>
+                            <option value="SIE" label="Sistemas de Información en la Empresa"></option>
+                            <option value="TABD" label="Tecnologías Avanzadas de Bases de Datos"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (3º Curso)"> 
+                            <option value="AS" label="Administración de Servidores"></option>
+                            <option value="IPO" label="Interacción de Persona-Ordenador"></option>
+                            <option value="ICR" label="Interconexión de Redes"></option>
+                            <option value="PW" label="Programación Web"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (4º Curso)"> 
+                            <option value="APC" label="Aprendizaje Computacional"></option>
+                            <option value="CC" label="Complejidad Computacional"></option>
+                            <option value="P" label="Percepción"></option>
+                            <option value="PL" label="Procesadores de Lenguaje"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (4º Curso)"> 
+                            <option value="ASRC" label="Administración y Seguridad de Redes de Computadores"></option>
+                            <option value="ACPD" label="Arquitectura de Computadores Paralelos y Distribuidos"></option>
+                            <option value="DAAC" label="Diseño Avanzado de Arquitectura de Computadores"></option>
+                            <option value="PPD" label="Programación Paralela y Distribuida"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (4º Curso)"> 
+                            <option value="CS" label="Calidad del Software"></option>
+                            <option value="DGPS" label="Dirección y Gestión de Proyectos Software"></option>
+                            <option value="ES" label="Evolución del Software"></option>
+                            <option value="MPS" label="Metodologías y Procesos Software"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (4º Curso)"> 
+                            <option value="DSH" label="Administración de Bases de Datos"></option>
+                            <option value="PNET" label="Ingeniería de Sistemas de Información"></option>
+                            <option value="SIE" label="Recuperación de la Información"></option>
+                            <option value="TABD" label="Tecnologías de Inteligencia de Negocio"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (4º Curso)"> 
+                            <option value="AS" label="Calidad de los Sistemas Informáticos"></option>
+                            <option value="IPO" label="Ingeniería Web"></option>
+                            <option value="ICR" label="Internet y Negocio Electrónico"></option>
+                            <option value="PW" label="Virtualización de Sistemas"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                    </select>
+
+                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
+   
+    <div class="container">
+    
+        <form action="/apuestas" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un de un notable</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                        <optgroup label="1º Curso">
+                            <option value="CAL" label="Cálculo"></option>
+                            <option value="IG" label="Infórmatica General"></option>
+                            <option value="IP" label="Introducción a la Programación"></option>
+                            <option value="MD" label="Matemática Discreta"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+
+                            <option value="EST" label="Estádistica"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                        </optgroup>
+                    
+                        <optgroup label="2º Curso"> 
+                            <option value="AAED" label="Análisis de Algoritmos y Estructura de Datos"></option>
+                            <option value="AC" label="Arquitectura de Computadores"></option>
+                            <option value="OGE" label="Organización y Gestión de Empresas"></option>
+                            <option value="RC" label="Redes de Computadores"></option>
+                            <option value="SO" label="Sistemas Operativos"></option>
+
+                            <option value="BD" label="Bases de Datos"></option>
+                            <option value="EDNL" label="Estructura de datos no lineales"></option>
+                            <option value="IS" label="Ingeniería del Software"></option>
+                            <option value="POO" label="Programación Orientada a Objetos"></option>
+                            <option value="SD" label="Sistemas Distribuidos"></option>
+                        </optgroup>
+
+                        <optgroup label="3º Curso"> 
+                            <option value="DA" label="Diseño de Algoritmos"></option>
+                            <option value="IA" label="Inteligencia Artificial"></option>
+                            <option value="PCTR" label="Programación Concurrida en Tiempo Real"></option>
+                            <option value="PINF" label="Proyectos Informáticos"></option>
+                            <option value="SSI" label="Seguridad en los Sistemas Informaticos"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (3º Curso)"> 
+                            <option value="MC" label="Modelos de Computación"></option>
+                            <option value="RP" label="Reconocimiento de Patrones"></option>
+                            <option value="SI" label="Sistemas Inteligentes"></option>
+                            <option value="TALF" label="Teoría de Autómatas y Lenguajes Formales"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (3º Curso)"> 
+                            <option value="DBM" label="Diseños Basados en Microprocesadores"></option>
+                            <option value="DCE" label="Diseño de Computadores Empotrados"></option>
+                            <option value="DRC" label="Diseño de Redes de Computadores"></option>
+                            <option value="TDC" label="Técnicas de Diseño de Computadores"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (3º Curso)"> 
+                            <option value="DSS" label="Diseño de Sistemas Software"></option>
+                            <option value="IISS" label="Implementación e Implantación de Sistemas Software"></option>
+                            <option value="IR" label="Ingeniería de Requisitos"></option>
+                            <option value="VVS" label="Verificación y Validación del Software"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (3º Curso)"> 
+                            <option value="DSH" label="Desarrollo de Sistemas Hipermedia"></option>
+                            <option value="PNET" label="Programación en Internet"></option>
+                            <option value="SIE" label="Sistemas de Información en la Empresa"></option>
+                            <option value="TABD" label="Tecnologías Avanzadas de Bases de Datos"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (3º Curso)"> 
+                            <option value="AS" label="Administración de Servidores"></option>
+                            <option value="IPO" label="Interacción de Persona-Ordenador"></option>
+                            <option value="ICR" label="Interconexión de Redes"></option>
+                            <option value="PW" label="Programación Web"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (4º Curso)"> 
+                            <option value="APC" label="Aprendizaje Computacional"></option>
+                            <option value="CC" label="Complejidad Computacional"></option>
+                            <option value="P" label="Percepción"></option>
+                            <option value="PL" label="Procesadores de Lenguaje"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (4º Curso)"> 
+                            <option value="ASRC" label="Administración y Seguridad de Redes de Computadores"></option>
+                            <option value="ACPD" label="Arquitectura de Computadores Paralelos y Distribuidos"></option>
+                            <option value="DAAC" label="Diseño Avanzado de Arquitectura de Computadores"></option>
+                            <option value="PPD" label="Programación Paralela y Distribuida"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (4º Curso)"> 
+                            <option value="CS" label="Calidad del Software"></option>
+                            <option value="DGPS" label="Dirección y Gestión de Proyectos Software"></option>
+                            <option value="ES" label="Evolución del Software"></option>
+                            <option value="MPS" label="Metodologías y Procesos Software"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (4º Curso)"> 
+                            <option value="DSH" label="Administración de Bases de Datos"></option>
+                            <option value="PNET" label="Ingeniería de Sistemas de Información"></option>
+                            <option value="SIE" label="Recuperación de la Información"></option>
+                            <option value="TABD" label="Tecnologías de Inteligencia de Negocio"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (4º Curso)"> 
+                            <option value="AS" label="Calidad de los Sistemas Informáticos"></option>
+                            <option value="IPO" label="Ingeniería Web"></option>
+                            <option value="ICR" label="Internet y Negocio Electrónico"></option>
+                            <option value="PW" label="Virtualización de Sistemas"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                    </select>
+
+                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+   
+    <div class="container">
+    
+        <form action="/apuestas" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un sobresaliente</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                        <optgroup label="1º Curso">
+                            <option value="CAL" label="Cálculo"></option>
+                            <option value="IG" label="Infórmatica General"></option>
+                            <option value="IP" label="Introducción a la Programación"></option>
+                            <option value="MD" label="Matemática Discreta"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+
+                            <option value="EST" label="Estádistica"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                            <option value="SDIG" label="Sistemas Digitales"></option>
+                        </optgroup>
+                    
+                        <optgroup label="2º Curso"> 
+                            <option value="AAED" label="Análisis de Algoritmos y Estructura de Datos"></option>
+                            <option value="AC" label="Arquitectura de Computadores"></option>
+                            <option value="OGE" label="Organización y Gestión de Empresas"></option>
+                            <option value="RC" label="Redes de Computadores"></option>
+                            <option value="SO" label="Sistemas Operativos"></option>
+
+                            <option value="BD" label="Bases de Datos"></option>
+                            <option value="EDNL" label="Estructura de datos no lineales"></option>
+                            <option value="IS" label="Ingeniería del Software"></option>
+                            <option value="POO" label="Programación Orientada a Objetos"></option>
+                            <option value="SD" label="Sistemas Distribuidos"></option>
+                        </optgroup>
+
+                        <optgroup label="3º Curso"> 
+                            <option value="DA" label="Diseño de Algoritmos"></option>
+                            <option value="IA" label="Inteligencia Artificial"></option>
+                            <option value="PCTR" label="Programación Concurrida en Tiempo Real"></option>
+                            <option value="PINF" label="Proyectos Informáticos"></option>
+                            <option value="SSI" label="Seguridad en los Sistemas Informaticos"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (3º Curso)"> 
+                            <option value="MC" label="Modelos de Computación"></option>
+                            <option value="RP" label="Reconocimiento de Patrones"></option>
+                            <option value="SI" label="Sistemas Inteligentes"></option>
+                            <option value="TALF" label="Teoría de Autómatas y Lenguajes Formales"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (3º Curso)"> 
+                            <option value="DBM" label="Diseños Basados en Microprocesadores"></option>
+                            <option value="DCE" label="Diseño de Computadores Empotrados"></option>
+                            <option value="DRC" label="Diseño de Redes de Computadores"></option>
+                            <option value="TDC" label="Técnicas de Diseño de Computadores"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (3º Curso)"> 
+                            <option value="DSS" label="Diseño de Sistemas Software"></option>
+                            <option value="IISS" label="Implementación e Implantación de Sistemas Software"></option>
+                            <option value="IR" label="Ingeniería de Requisitos"></option>
+                            <option value="VVS" label="Verificación y Validación del Software"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (3º Curso)"> 
+                            <option value="DSH" label="Desarrollo de Sistemas Hipermedia"></option>
+                            <option value="PNET" label="Programación en Internet"></option>
+                            <option value="SIE" label="Sistemas de Información en la Empresa"></option>
+                            <option value="TABD" label="Tecnologías Avanzadas de Bases de Datos"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (3º Curso)"> 
+                            <option value="AS" label="Administración de Servidores"></option>
+                            <option value="IPO" label="Interacción de Persona-Ordenador"></option>
+                            <option value="ICR" label="Interconexión de Redes"></option>
+                            <option value="PW" label="Programación Web"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Computadores (4º Curso)"> 
+                            <option value="APC" label="Aprendizaje Computacional"></option>
+                            <option value="CC" label="Complejidad Computacional"></option>
+                            <option value="P" label="Percepción"></option>
+                            <option value="PL" label="Procesadores de Lenguaje"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería de Computadores (4º Curso)"> 
+                            <option value="ASRC" label="Administración y Seguridad de Redes de Computadores"></option>
+                            <option value="ACPD" label="Arquitectura de Computadores Paralelos y Distribuidos"></option>
+                            <option value="DAAC" label="Diseño Avanzado de Arquitectura de Computadores"></option>
+                            <option value="PPD" label="Programación Paralela y Distribuida"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Ingeniería del Software (4º Curso)"> 
+                            <option value="CS" label="Calidad del Software"></option>
+                            <option value="DGPS" label="Dirección y Gestión de Proyectos Software"></option>
+                            <option value="ES" label="Evolución del Software"></option>
+                            <option value="MPS" label="Metodologías y Procesos Software"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                        <optgroup label="Especialidad: Sistemas de información (4º Curso)"> 
+                            <option value="DSH" label="Administración de Bases de Datos"></option>
+                            <option value="PNET" label="Ingeniería de Sistemas de Información"></option>
+                            <option value="SIE" label="Recuperación de la Información"></option>
+                            <option value="TABD" label="Tecnologías de Inteligencia de Negocio"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+                        
+                        <optgroup label="Especialidad: Tecnologías de la información (4º Curso)"> 
+                            <option value="AS" label="Calidad de los Sistemas Informáticos"></option>
+                            <option value="IPO" label="Ingeniería Web"></option>
+                            <option value="ICR" label="Internet y Negocio Electrónico"></option>
+                            <option value="PW" label="Virtualización de Sistemas"></option>
+                            <option value="PC" label="Prácticas Curriculares"></option>
+                            <option value="TFG" label="Trabajo Fin de Grado"></option>
+                        </optgroup>
+
+                    </select>
+
+                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                </div>
+            </div>
+        </form>
+    </div>
       
 </body>
 </html>
-
-
-
-<!DOCTYPE html>
-<html lang=es>
-    <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <title>Apuestas | PINFBET</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="/css/apuestas.css" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-          crossorigin="anonymous"
-        />
-    </head>
-    <body class="apuestas">
-
-        <div class="cabecera">
-            <h1>Comience a Apostar</h1>
-        </div>
-
-        <form name="formulario" method="POST" action="" id="header">
-
-            <ul class="nav">
-                <select name="asignatura" multiple>        
-                    <optgroup label="1º Curso">
-                        <ul>
-                            <option value="CAL" label="Cálculo"></option>
-                            <option value="IG" label="Infórmatica General"></option>
-                            <option value="IP" label="Introducción a la Programación"></option><li><a href="">Introducción a la Programación</a></li>
-                            <option value="MD" label="Matemática Discreta"></option><li><a href="">Matemática Discreta</a></li>
-                            <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Sistemas Digitales</a></li>
-
-                            <option value="EST" label="Estádistica"></option><li><a href="">Estádistica</a></li>
-                            <li><a href="">Fundamentos Físicos y Electronicos de la Informática</a></li>
-                            <li><a href="">Fundamentos y Estructuras de Computadores</a></li>
-                            <li><a href="">Metodología de la Programación</a></li>
-                            <li><a href="">Álgebra</a></li>
-                        </ul>
-                    </optgroup>
-
-                    <li><a href="">2º Curso</a>
-                        <ul>
-                            <li><a href="">Análisis de Algoritmos y Estructura de Datos</a></li>
-                            <li><a href="">Arquitectura de Computadores</a></li>
-                            <li><a href="">Organización y Gestión de Empresas</a></li>
-                            <li><a href="">Redes de Computadores</a></li>
-                            <li><a href="">Sistemas Operativos</a></li>
-
-                            <li><a href="">Bases de Datos</a></li>
-                            <li><a href="">Estructura de Datos no Lineales</a></li>
-                            <li><a href="">Ingeniería del Software</a></li>
-                            <li><a href="">Programación Orientada a Objetos</a></li>
-                            <li><a href="">Sistemas Distribuidos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">3º Curso</a>
-                        <ul>
-                            <li><a href="">Diseño de Algoritmos</a></li>
-                            <li><a href="">Inteligencia Artificial</a></li>
-                            <li><a href="">Programación Concurrida en Tiempo Real</a></li>
-                            <li><a href="">Proyectos Informáticos</a></li>
-                            <li><a href="">Seguridad en los Sistemas Informaticos</a></li>
-                            <li><a href="">ELIJA ESPECIALIDAD...</a>
-                                <ul>
-                                    <li><a href="">Computación</a>
-                                        <ul>
-                                            <li><a href="">Modelos de Computación</a></li>
-                                            <li><a href="">Reconocimiento de Patrones</a></li>
-                                            <li><a href="">Sistemas Inteligentes</a></li>
-                                            <li><a href="">Teoría de Autómatas y Lenguajes Formales</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Ingeniería de Computadores</a>
-                                        <ul>
-                                            <li><a href="">Diseños Basados en Microprocesadores</a></li>
-                                            <li><a href="">Diseño de Computadores Empotrados</a></li>
-                                            <li><a href="">Diseño de Redes de Computadores</a></li>
-                                            <li><a href="">Técnicas de Diseño de Computadores</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Ingeniería del Software</a>
-                                        <ul>
-                                            <li><a href="">Diseño de Sistemas Software</a></li>
-                                            <li><a href="">Implementación e Implantación de Sistemas Software</a></li>
-                                            <li><a href="">Ingeniería de Requisitos</a></li>
-                                            <li><a href="">Verificación y Validación del Software</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Sistemas de Información</a>
-                                        <ul>
-                                            <li><a href="">Desarrollo de Sistemas Hipermedia</a></li>
-                                            <li><a href="">Programación en Internet</a></li>
-                                            <li><a href="">Sistemas de Información en la Empresa</a></li>
-                                            <li><a href="">Tecnologías Avanzadas de Bases de Datos</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Tecnologías de la Información</a>
-                                        <ul>
-                                            <li><a href="">Administración de Servidores</a></li>
-                                            <li><a href="">Interacción de Persona-Ordenador</a></li>
-                                            <li><a href="">Interconexión de Redes</a></li>
-                                            <li><a href="">Programación Web</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="">4º Curso</a>
-                        <ul>
-                            <li><a href="">ELIJA ESPECIALIDAD...</a>
-                                <ul>                    
-                                    <li><a href="">Computación</a>
-                                        <ul>
-                                            <li><a href="">Aprendizaje Computacional</a></li>
-                                            <li><a href="">Complejidad Computacional</a></li>
-                                            <li><a href="">Percepción</a></li>
-                                            <li><a href="">Procesadores de Lenguaje</a></li>
-                                            <li><a href="">Prácticas Curriculares</a></li>
-                                            <li><a href="">Trabajo Fin de Grado</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Ingeniería de Computadores</a>
-                                        <ul>
-                                            <li><a href="">Administración y Seguridad de <br>
-                                                Redes de Computadores</a></li>
-                                            <li><a href="">Arquitectura de Computadores <br>
-                                                Paralelos y Distribuidos</a></li>
-                                            <li><a href="">Diseño Avanzado de Arquitectura <br> 
-                                                de Computadores</a></li>
-                                            <li><a href="">Programación Paralela y Distribuida</a></li>
-                                            <li><a href="">Prácticas Curriculares</a></li>
-                                            <li><a href="">Trabajo Fin de Grado</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Ingeniería del Software</a>
-                                        <ul>
-                                            <li><a href="">Calidad del Software</a></li>
-                                            <li><a href="">Dirección y Gestión de Proyectos Software</a></li>
-                                            <li><a href="">Evolución del Software</a></li>
-                                            <li><a href="">Metodologías y Procesos Software</a></li>
-                                            <li><a href="">Prácticas Curriculares</a></li>
-                                            <li><a href="">Trabajo Fin de Grado</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Sistemas de Información</a>
-                                        <ul>
-                                            <li><a href="">Administración de Bases de Datos</a></li>
-                                            <li><a href="">Ingeniería de Sistemas de Información</a></li>
-                                            <li><a href="">Recuperación de la Información</a></li>
-                                            <li><a href="">Tecnologías de Inteligencia de Negocio</a></li>
-                                            <li><a href="">Trabajo Fin de Grado</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Tecnologías de la Información</a>
-                                        <ul>
-                                            <li><a href="">Calidad de los Sistemas Informáticos</a></li>
-                                            <li><a href="">Ingeniería Web</a></li>
-                                            <li><a href="">Internet y Negocio Électronico</a></li>
-                                            <li><a href="">Prácticas Curriculares</a></li>
-                                            <li><a href="">Trabajo Fin de Grado</a></li>
-                                            <li><a href="">Virtualización de Sistemas</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                
-                    <li><a href="/principal">Volver</a></li>
-                </select> 
-            </ul>
-        </div>
-    </body>
-</html>
-*/
