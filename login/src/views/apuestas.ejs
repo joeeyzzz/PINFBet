@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang=es>
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuestas | PINFBET</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous"
+    />
+</head>
+<br>
+    <b id="apuestas_titulo">
+        <center>Apuesta en PINFBET</center>
+    </b>
+</br>
+<body id="body_apuestas">
+    <b></b>
+    <b></b>
+    <form action="/apuestas" method="POST">
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                    <optgroup label="1º Curso">
+                        <option value="CAL" label="Cálculo"></option>
+                        <option value="IG" label="Infórmatica General"></option>
+                        <option value="IP" label="Introducción a la Programación"></option>
+                        <option value="MD" label="Matemática Discreta"></option>
+                        <option value="SDIG" label="Sistemas Digitales"></option>
+
+                        <option value="EST" label="Estádistica"></option>
+                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Fundamentos Físicos y Electronicos de la Informática</a></li>
+                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Fundamentos y Estructuras de Computadores</a></li>
+                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Metodología de la Programación</a></li>
+                        <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Álgebra</a></li>
+                    </optgroup>
+                </select>
+                <button type="submit" class="btn btn-primary my-1">Apostar</button>
+            </div>
+        </div>
+    </form>
+      
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang=es>
     <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <title>Apuestas | PINFBET</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="/css/apuestas.css" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+          crossorigin="anonymous"
+        />
     </head>
     <body class="apuestas">
 
@@ -13,159 +72,160 @@
             <h1>Comience a Apostar</h1>
         </div>
 
-        <div selec id="header">
+        <form name="formulario" method="POST" action="" id="header">
 
-            <ul class="nav"> 
-                <b></b>           
-                <li><a href="">1º Curso</a>
-                    <ul>
-                        <li><a href="">Cálculo</a></li>
-                        <li><a href="">Infórmatica General</a></li>
-                        <li><a href="">Introducción a la Programación</a></li>
-                        <li><a href="">Matemática Discreta</a></li>
-                        <li><a href="">Sistemas Digitales</a></li>
+            <ul class="nav">
+                <select name="asignatura" multiple>        
+                    <optgroup label="1º Curso">
+                        <ul>
+                            <option value="CAL" label="Cálculo"></option>
+                            <option value="IG" label="Infórmatica General"></option>
+                            <option value="IP" label="Introducción a la Programación"></option><li><a href="">Introducción a la Programación</a></li>
+                            <option value="MD" label="Matemática Discreta"></option><li><a href="">Matemática Discreta</a></li>
+                            <option value="SDIG" label="Sistemas Digitales"></option><li><a href="">Sistemas Digitales</a></li>
 
-                        <li><a href="">Estádistica</a></li>
-                        <li><a href="">Fundamentos Físicos y Electronicos de la Informática</a></li>
-                        <li><a href="">Fundamentos y Estructuras de Computadores</a></li>
-                        <li><a href="">Metodología de la Programación</a></li>
-                        <li><a href="">Álgebra</a></li>
-                    </ul>
-                </li>
+                            <option value="EST" label="Estádistica"></option><li><a href="">Estádistica</a></li>
+                            <li><a href="">Fundamentos Físicos y Electronicos de la Informática</a></li>
+                            <li><a href="">Fundamentos y Estructuras de Computadores</a></li>
+                            <li><a href="">Metodología de la Programación</a></li>
+                            <li><a href="">Álgebra</a></li>
+                        </ul>
+                    </optgroup>
 
-                <li><a href="">2º Curso</a>
-                    <ul>
-                        <li><a href="">Análisis de Algoritmos y Estructura de Datos</a></li>
-                        <li><a href="">Arquitectura de Computadores</a></li>
-                        <li><a href="">Organización y Gestión de Empresas</a></li>
-                        <li><a href="">Redes de Computadores</a></li>
-                        <li><a href="">Sistemas Operativos</a></li>
+                    <li><a href="">2º Curso</a>
+                        <ul>
+                            <li><a href="">Análisis de Algoritmos y Estructura de Datos</a></li>
+                            <li><a href="">Arquitectura de Computadores</a></li>
+                            <li><a href="">Organización y Gestión de Empresas</a></li>
+                            <li><a href="">Redes de Computadores</a></li>
+                            <li><a href="">Sistemas Operativos</a></li>
 
-                        <li><a href="">Bases de Datos</a></li>
-                        <li><a href="">Estructura de Datos no Lineales</a></li>
-                        <li><a href="">Ingeniería del Software</a></li>
-                        <li><a href="">Programación Orientada a Objetos</a></li>
-                        <li><a href="">Sistemas Distribuidos</a></li>
-                    </ul>
-                </li>
-                <li><a href="">3º Curso</a>
-                    <ul>
-                        <li><a href="">Diseño de Algoritmos</a></li>
-                        <li><a href="">Inteligencia Artificial</a></li>
-                        <li><a href="">Programación Concurrida en Tiempo Real</a></li>
-                        <li><a href="">Proyectos Informáticos</a></li>
-                        <li><a href="">Seguridad en los Sistemas Informaticos</a></li>
-                        <li><a href="">ELIJA ESPECIALIDAD...</a>
-                            <ul>
-                                <li><a href="">Computación</a>
-                                    <ul>
-                                        <li><a href="">Modelos de Computación</a></li>
-                                        <li><a href="">Reconocimiento de Patrones</a></li>
-                                        <li><a href="">Sistemas Inteligentes</a></li>
-                                        <li><a href="">Teoría de Autómatas y Lenguajes Formales</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Ingeniería de Computadores</a>
-                                    <ul>
-                                        <li><a href="">Diseños Basados en Microprocesadores</a></li>
-                                        <li><a href="">Diseño de Computadores Empotrados</a></li>
-                                        <li><a href="">Diseño de Redes de Computadores</a></li>
-                                        <li><a href="">Técnicas de Diseño de Computadores</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Ingeniería del Software</a>
-                                    <ul>
-                                        <li><a href="">Diseño de Sistemas Software</a></li>
-                                        <li><a href="">Implementación e Implantación de Sistemas Software</a></li>
-                                        <li><a href="">Ingeniería de Requisitos</a></li>
-                                        <li><a href="">Verificación y Validación del Software</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Sistemas de Información</a>
-                                    <ul>
-                                        <li><a href="">Desarrollo de Sistemas Hipermedia</a></li>
-                                        <li><a href="">Programación en Internet</a></li>
-                                        <li><a href="">Sistemas de Información en la Empresa</a></li>
-                                        <li><a href="">Tecnologías Avanzadas de Bases de Datos</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Tecnologías de la Información</a>
-                                    <ul>
-                                        <li><a href="">Administración de Servidores</a></li>
-                                        <li><a href="">Interacción de Persona-Ordenador</a></li>
-                                        <li><a href="">Interconexión de Redes</a></li>
-                                        <li><a href="">Programación Web</a></li>
-                                    </ul>
-                                </li>
+                            <li><a href="">Bases de Datos</a></li>
+                            <li><a href="">Estructura de Datos no Lineales</a></li>
+                            <li><a href="">Ingeniería del Software</a></li>
+                            <li><a href="">Programación Orientada a Objetos</a></li>
+                            <li><a href="">Sistemas Distribuidos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">3º Curso</a>
+                        <ul>
+                            <li><a href="">Diseño de Algoritmos</a></li>
+                            <li><a href="">Inteligencia Artificial</a></li>
+                            <li><a href="">Programación Concurrida en Tiempo Real</a></li>
+                            <li><a href="">Proyectos Informáticos</a></li>
+                            <li><a href="">Seguridad en los Sistemas Informaticos</a></li>
+                            <li><a href="">ELIJA ESPECIALIDAD...</a>
+                                <ul>
+                                    <li><a href="">Computación</a>
+                                        <ul>
+                                            <li><a href="">Modelos de Computación</a></li>
+                                            <li><a href="">Reconocimiento de Patrones</a></li>
+                                            <li><a href="">Sistemas Inteligentes</a></li>
+                                            <li><a href="">Teoría de Autómatas y Lenguajes Formales</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Ingeniería de Computadores</a>
+                                        <ul>
+                                            <li><a href="">Diseños Basados en Microprocesadores</a></li>
+                                            <li><a href="">Diseño de Computadores Empotrados</a></li>
+                                            <li><a href="">Diseño de Redes de Computadores</a></li>
+                                            <li><a href="">Técnicas de Diseño de Computadores</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Ingeniería del Software</a>
+                                        <ul>
+                                            <li><a href="">Diseño de Sistemas Software</a></li>
+                                            <li><a href="">Implementación e Implantación de Sistemas Software</a></li>
+                                            <li><a href="">Ingeniería de Requisitos</a></li>
+                                            <li><a href="">Verificación y Validación del Software</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Sistemas de Información</a>
+                                        <ul>
+                                            <li><a href="">Desarrollo de Sistemas Hipermedia</a></li>
+                                            <li><a href="">Programación en Internet</a></li>
+                                            <li><a href="">Sistemas de Información en la Empresa</a></li>
+                                            <li><a href="">Tecnologías Avanzadas de Bases de Datos</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Tecnologías de la Información</a>
+                                        <ul>
+                                            <li><a href="">Administración de Servidores</a></li>
+                                            <li><a href="">Interacción de Persona-Ordenador</a></li>
+                                            <li><a href="">Interconexión de Redes</a></li>
+                                            <li><a href="">Programación Web</a></li>
+                                        </ul>
+                                    </li>
 
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="">4º Curso</a>
-                    <ul>
-                        <li><a href="">ELIJA ESPECIALIDAD...</a>
-                            <ul>                    
-                                <li><a href="">Computación</a>
-                                    <ul>
-                                        <li><a href="">Aprendizaje Computacional</a></li>
-                                        <li><a href="">Complejidad Computacional</a></li>
-                                        <li><a href="">Percepción</a></li>
-                                        <li><a href="">Procesadores de Lenguaje</a></li>
-                                        <li><a href="">Prácticas Curriculares</a></li>
-                                        <li><a href="">Trabajo Fin de Grado</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Ingeniería de Computadores</a>
-                                    <ul>
-                                        <li><a href="">Administración y Seguridad de <br>
-                                            Redes de Computadores</a></li>
-                                        <li><a href="">Arquitectura de Computadores <br>
-                                            Paralelos y Distribuidos</a></li>
-                                        <li><a href="">Diseño Avanzado de Arquitectura <br> 
-                                            de Computadores</a></li>
-                                        <li><a href="">Programación Paralela y Distribuida</a></li>
-                                        <li><a href="">Prácticas Curriculares</a></li>
-                                        <li><a href="">Trabajo Fin de Grado</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Ingeniería del Software</a>
-                                    <ul>
-                                        <li><a href="">Calidad del Software</a></li>
-                                        <li><a href="">Dirección y Gestión de Proyectos Software</a></li>
-                                        <li><a href="">Evolución del Software</a></li>
-                                        <li><a href="">Metodologías y Procesos Software</a></li>
-                                        <li><a href="">Prácticas Curriculares</a></li>
-                                        <li><a href="">Trabajo Fin de Grado</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Sistemas de Información</a>
-                                    <ul>
-                                        <li><a href="">Administración de Bases de Datos</a></li>
-                                        <li><a href="">Ingeniería de Sistemas de Información</a></li>
-                                        <li><a href="">Recuperación de la Información</a></li>
-                                        <li><a href="">Tecnologías de Inteligencia de Negocio</a></li>
-                                        <li><a href="">Trabajo Fin de Grado</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Tecnologías de la Información</a>
-                                    <ul>
-                                        <li><a href="">Calidad de los Sistemas Informáticos</a></li>
-                                        <li><a href="">Ingeniería Web</a></li>
-                                        <li><a href="">Internet y Negocio Électronico</a></li>
-                                        <li><a href="">Prácticas Curriculares</a></li>
-                                        <li><a href="">Trabajo Fin de Grado</a></li>
-                                        <li><a href="">Virtualización de Sistemas</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            
-                <li><a href="/principal">Volver</a></li>
-
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">4º Curso</a>
+                        <ul>
+                            <li><a href="">ELIJA ESPECIALIDAD...</a>
+                                <ul>                    
+                                    <li><a href="">Computación</a>
+                                        <ul>
+                                            <li><a href="">Aprendizaje Computacional</a></li>
+                                            <li><a href="">Complejidad Computacional</a></li>
+                                            <li><a href="">Percepción</a></li>
+                                            <li><a href="">Procesadores de Lenguaje</a></li>
+                                            <li><a href="">Prácticas Curriculares</a></li>
+                                            <li><a href="">Trabajo Fin de Grado</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Ingeniería de Computadores</a>
+                                        <ul>
+                                            <li><a href="">Administración y Seguridad de <br>
+                                                Redes de Computadores</a></li>
+                                            <li><a href="">Arquitectura de Computadores <br>
+                                                Paralelos y Distribuidos</a></li>
+                                            <li><a href="">Diseño Avanzado de Arquitectura <br> 
+                                                de Computadores</a></li>
+                                            <li><a href="">Programación Paralela y Distribuida</a></li>
+                                            <li><a href="">Prácticas Curriculares</a></li>
+                                            <li><a href="">Trabajo Fin de Grado</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Ingeniería del Software</a>
+                                        <ul>
+                                            <li><a href="">Calidad del Software</a></li>
+                                            <li><a href="">Dirección y Gestión de Proyectos Software</a></li>
+                                            <li><a href="">Evolución del Software</a></li>
+                                            <li><a href="">Metodologías y Procesos Software</a></li>
+                                            <li><a href="">Prácticas Curriculares</a></li>
+                                            <li><a href="">Trabajo Fin de Grado</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Sistemas de Información</a>
+                                        <ul>
+                                            <li><a href="">Administración de Bases de Datos</a></li>
+                                            <li><a href="">Ingeniería de Sistemas de Información</a></li>
+                                            <li><a href="">Recuperación de la Información</a></li>
+                                            <li><a href="">Tecnologías de Inteligencia de Negocio</a></li>
+                                            <li><a href="">Trabajo Fin de Grado</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Tecnologías de la Información</a>
+                                        <ul>
+                                            <li><a href="">Calidad de los Sistemas Informáticos</a></li>
+                                            <li><a href="">Ingeniería Web</a></li>
+                                            <li><a href="">Internet y Negocio Électronico</a></li>
+                                            <li><a href="">Prácticas Curriculares</a></li>
+                                            <li><a href="">Trabajo Fin de Grado</a></li>
+                                            <li><a href="">Virtualización de Sistemas</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="/principal">Volver</a></li>
+                </select> 
             </ul>
         </div>
     </body>
 </html>
+*/
