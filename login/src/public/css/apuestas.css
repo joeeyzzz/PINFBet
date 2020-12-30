@@ -10,8 +10,8 @@ body{
 
 .cabecera{
     text-align: center;
-    font-family: Arial;
-    font-size: medium;
+    font-size: 1cm;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #header{
