@@ -16,7 +16,7 @@
 </head>
 <body id="body_apuestas">
 
-    <div class="apuesta1">
+    <div class="apuesta1" style="position: relative; bottom: 2cm;">
         <h1>Apuesta en PinfBet</h1>
     </div>
    
@@ -25,8 +25,9 @@
         <form action="/apuestas" method="POST">
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                    <label class="mr-sm-2" style="position: relative; left: -4cm;" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="position: relative; left: 2cm;" required>
+                        <option value="">Seleccione asignatura</option>
                         <optgroup label="1º Curso">
                             <option value="CAL" label="Cálculo"></option>
                             <option value="IG" label="Infórmatica General"></option>
@@ -144,8 +145,8 @@
                         </optgroup>
 
                     </select>
-
-                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                    <input style="width: 3cm; height: 1cm; position: relative; right: -26.5cm; bottom: 1cm;"  type="number" min="1" name="creditos_apostados" class="form-control" placeholder="Créditos" required>
+                    <button type="submit" class="btn btn-primary my-1" style="position: relative; right: -30cm; bottom: 2.1cm;">Apostar</button>
                 </div>
             </div>
         </form>
@@ -154,11 +155,12 @@
    
     <div class="container">
     
-        <form action="/apuestas" method="POST">
+        <form action="/apuestas" method="POST" style="position: relative; bottom: 3.5cm;">
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un de un notable</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                    <label class="mr-sm-2" style="position: relative; left: -4cm;" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un notable</label>
+                    <select class="custom-select mr-sm-2" style="position: relative; left: -1.5cm;" id="inlineFormCustomSelect" required>
+                        <option value="">Seleccione asignatura</option>
                         <optgroup label="1º Curso">
                             <option value="CAL" label="Cálculo"></option>
                             <option value="IG" label="Infórmatica General"></option>
@@ -276,8 +278,8 @@
                         </optgroup>
 
                     </select>
-
-                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                    <input style="width: 3cm; height: 1cm; position: relative; right: -26.5cm; bottom: 1cm;"  type="number" min="1" name="creditos_apostados" class="form-control" placeholder="Créditos" required>
+                    <button type="submit" class="btn btn-primary my-1" style="position: relative; right: -30cm; bottom: 2.1cm;">Apostar</button>
                 </div>
             </div>
         </form>
@@ -285,11 +287,12 @@
    
     <div class="container">
     
-        <form action="/apuestas" method="POST">
+        <form action="/apuestas" method="POST" style="position: relative; bottom: 7cm;">
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un sobresaliente</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                    <label class="mr-sm-2" style="position: relative; left: -4cm;" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar con un sobresaliente</label>
+                    <select class="custom-select mr-sm-2" style="position: relative; left: -2.80cm;" id="inlineFormCustomSelect" required>
+                        <option value="">Seleccione asignatura</option>
                         <optgroup label="1º Curso">
                             <option value="CAL" label="Cálculo"></option>
                             <option value="IG" label="Infórmatica General"></option>
@@ -407,8 +410,8 @@
                         </optgroup>
 
                     </select>
-
-                    <button type="submit" class="btn btn-primary my-1">Apostar</button>
+                    <input style="width: 3cm; height: 1cm; position: relative; right: -26.5cm; bottom: 1cm;"  type="number" min="1" name="creditos_apostados" class="form-control" placeholder="Créditos" required>
+                    <button type="submit" class="btn btn-primary my-1" style="position: relative; right: -30cm; bottom: 2.1cm;">Apostar</button>
                 </div>
             </div>
         </form>
