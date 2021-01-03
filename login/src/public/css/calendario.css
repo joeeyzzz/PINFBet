@@ -3,7 +3,12 @@
     width: 80%;
     max-width: 600px;
     margin: 1em auto;
-    padding: .5em 0; }
+    padding: .5em 0; 
+    -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none;
+}
 
 .calendar__info {
       display: -webkit-box;
@@ -15,35 +20,67 @@
       padding: 0 2em;
       font-size: 1.2em;
       text-transform: uppercase; 
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none;
 }
 
 .calendar__prev, .calendar__next {
       color: #C7F464;
       cursor: pointer;
       font-size: 1.3em; 
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none;
+    -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none;
 }
 
 .calendar__prev {
-      margin-right: auto; 
+      margin-right: auto;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 }
 
 .calendar__next {
-      margin-left: auto; 
+      margin-left: auto;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 }
       
 .calendar__week, .calendar__dates {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      grid-gap: 10px; 
+      grid-gap: 10px;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 }
 
 .calendar__month, .calendar__year {
-      padding: .5em 1em; 
+      padding: .5em 1em;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 
     }
 .calendar__item {
       text-align: center;
-      line-height: 2; 
+      line-height: 2;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 }
 
 .calendar__today {
@@ -51,9 +88,17 @@
       color: white;
       width: 50%;
       border-radius: 50%;
-      margin: auto; 
+      margin: auto;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none;
 }
 
 .calendar__last-days {
-      opacity: .3; 
+      opacity: .3;
+      -webkit-transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-timing-function: none; 
 }

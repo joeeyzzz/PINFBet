@@ -18,7 +18,7 @@ body{
     display: block;
 }
 
-div {
+.div_animacion {
     overflow: hidden;
     border-radius: 500px;
     width: 60px;
@@ -32,6 +32,7 @@ div {
     transition: width 0.5s, background 1s;
     padding: 10px;
     margin: 10px;
+    
 }
 
 #div1 {
