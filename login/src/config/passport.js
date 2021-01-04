@@ -27,6 +27,9 @@ module.exports = function (passport) {
                 var newUser = new User();
                 newUser.local.email = email;
                 newUser.local.password = newUser.generateHash(password);
+                newUser.local.name = req.body.name;
+                newUser.local.nickname = req.body.nickname;
+                newUser.local.nacimento = req.body.date;
                 newUser.save(function (error) {
                     if (error) {throw error;}
                     return done(null, newUser);
