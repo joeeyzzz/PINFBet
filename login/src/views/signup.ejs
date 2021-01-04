@@ -72,12 +72,19 @@
                                   </select>
                                 </div>
                             </div>
-                            <p></p>
-                            <div class="form-group"> 
-                                <div
-                                  class="g-recaptcha"
-                                  data-sitekey="6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ"
-                                ></div>
+                            <div class="drag-drop" style="margin-top: 0.5cm;">
+                                <input type="file" multiple="multiple" id="expediente" required />
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
+                                    <i class="fa fa-circle fa-stack-1x top medium"></i>
+                                    <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
+                                </span>
+                                <span class="desc">Pulse aquí para subir tu expediente</span>
+                            </div>
+                            <div style="margin-left: 0.65cm;">
+                                <div class="form-group" > 
+                                    <div class="g-recaptcha" data-sitekey="6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ"></div>
+                            </div>
                             </div>
                             <script>
                                 function miFuncion(a) {
@@ -93,7 +100,7 @@
                                 }
                               </script>
                             <div>
-                                <input type="submit" class= "btn btn-dark bt-lg">
+                                <input type="submit" class= "btn btn-dark bt-lg" style="margin-left: 0.65cm;">
                             </div>
                         </form>
                         <hr>
