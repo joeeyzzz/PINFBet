@@ -13,6 +13,7 @@ const session = require("express-session");
 const { stringify } = require('querystring');
 let randomColor = require('randomcolor');
 const uuid = require('uuid'); 
+const PDFParser = require("pdf2json");
 
 const {url} = require("./config/database");
 

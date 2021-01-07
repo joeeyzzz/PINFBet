@@ -30,6 +30,7 @@ module.exports = function (passport) {
                 newUser.local.name = req.body.name;
                 newUser.local.nickname = req.body.nickname;
                 newUser.local.nacimento = req.body.date;
+                newUser.local.credits = parseCredits(req.body.expediente);
                 newUser.save(function (error) {
                     if (error) {throw error;}
                     return done(null, newUser);
@@ -57,4 +58,37 @@ module.exports = function (passport) {
     }));
 
 
+}
+
+function parseCredits(file) {
+    let pdfParser = new PDFParser(this, 1);
+    pdfParser.loadPDF(file);
+
+        // On data ready
+        pdfParser.on("pdfParser_dataReady", () => {
+
+            // The raw PDF data in text form
+            const raw = pdfParser.getRawTextContent().replace(/\r\n/g, " ");
+            let data = raw.match(/\d,\d /g);
+            let nums = [];
+            for(let i = 0; i < data.length; i++) {
+                let step1 = data[i].replace(/\s+/g, '');
+                let step2 = step1.replace(/,/,'.');
+                nums.push(parseFloat(step2));
+            }
+            let creditos = 0;
+            for(let i = 0; i < nums.length; i++) {
+                if(nums[i] >= 9) {
+                    creditos += 10;
+                }
+                else if (nums[i] >= 7) {
+                    creditos += 8;
+                }
+                else if (nums[i] >= 5) {
+                    creditos += 6;
+                }
+            }
+            return(creditos);
+
+        });
 }
