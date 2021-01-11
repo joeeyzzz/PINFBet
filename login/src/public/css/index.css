@@ -1,0 +1,11 @@
+@font-face{
+    font-family: fuente_1;
+    font-style: normal;
+    font-weight: bold;
+    src:url(../BraxtonDemo-Regular.ttf);
+    font-size: x-large;
+}
+
+p.tipografia_1{
+    font-family: fuente_1;
+}
