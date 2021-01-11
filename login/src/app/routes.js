@@ -47,6 +47,12 @@ module.exports = (app, passport) => {
         })
     })
 
+    app.get("/expediente", (req,res) => {
+        res.render("expediente", {
+            message: req.flash("signupMessage")
+        })
+    })
+
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
             user: req.user

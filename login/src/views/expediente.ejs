@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+        <title>Expediente | PINFBET</title>
+        <%- include ("partials/head") %>
+        
+    </head>
+    <body>
+        <br>
+        <b style="font-size: 1cm;">
+            <center>Suba su Expediente</center>
+        </b>
+    </br>
+    <div class="chat-vuelta-principal" >
+        <a href="/principal" style="font-size: x-large; position: relative; left: 38cm; top: -3cm; font-weight: bold; color: white;  margin-left: 7px; text-decoration: none;"> Volver</a>
+    </div>
+        <div class="drag-drop" style="margin-top: 0.5cm;">
+            <input type="file" multiple="multiple" id="expediente" required />
+            <span class="fa-stack fa-2x">
+                <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
+                <i class="fa fa-circle fa-stack-1x top medium"></i>
+                <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
+            </span>
+            <span class="desc">Pulse aquí para subir tu expediente</span>
+        </div>
+        <div>
+            <input type="submit" class= "btn btn-dark bt-lg" style="margin-left: 19.5cm; margin-top: 0.5cm;">
+        </div>
+    </body>
+</html>
