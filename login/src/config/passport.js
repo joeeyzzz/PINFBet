@@ -1,4 +1,7 @@
 const LocalStrategy = require("passport-local").Strategy;
+const PDFParser = require("pdf2json");
+const multer = require("multer");
+
 
 const User = require("../app/models/user");
 
@@ -30,7 +33,17 @@ module.exports = function (passport) {
                 newUser.local.name = req.body.name;
                 newUser.local.nickname = req.body.nickname;
                 newUser.local.nacimento = req.body.date;
-                newUser.local.credits = parseCredits(req.body.expediente);
+                var storage = multer.diskStorage({
+                    destination: function(req2, file, cb) {
+                        cb(null, '../login/src/public/pdfs/');
+                     },
+                    filename: function (req3, file, cb) {
+                        cb(null , req.body.name + ".pdf");
+                    }
+                });
+                var upload = multer({ storage: storage })
+                
+
                 newUser.save(function (error) {
                     if (error) {throw error;}
                     return done(null, newUser);
@@ -88,7 +101,6 @@ function parseCredits(file) {
                     creditos += 6;
                 }
             }
-            return(creditos);
-
         });
+        return(creditos);
 }
