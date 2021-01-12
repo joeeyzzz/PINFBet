@@ -9,12 +9,13 @@ body{
 }
 
 .contenedor{
+    font-family: 'Courier New', Courier, monospace;
     width: 1000px;
     margin: 0px auto;
-    border: 1px solid black;
 }
 
 .cuadro{
+    font-family: 'Courier New', Courier, monospace;
     background-color: white;
 }
 
@@ -26,39 +27,48 @@ header{
     line-height: 100px;
     color: white;
     border-bottom: 3px dashed black;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .pregunta1{
     color: rgb(225, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .creadores{
     text-align: center;
     height: 120px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .pregunta2{
     color: rgb(225, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .ofrecemos{
     text-align: center;
     height: 200px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .pregunta3{
     color: rgb(225, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .probarnos{
     text-align: center;
     height: 120px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .contactanos{
     color: rgb(225, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .contacto{
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }

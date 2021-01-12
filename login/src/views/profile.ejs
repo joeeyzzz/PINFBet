@@ -11,28 +11,26 @@
     <div class="container">
       <header class="text-center">
         <h1>Perfil</h1>
-        <a href="/logout" class="btn btn-light btn-sm">
-          Cerrar sesión
+        <a href="/principal" class="btn btn-light btn-sm">
+          Volver
         </a>
       </header>
       <hr>
       <div class="container">
-        <div class="col-sm-6">
-          <div class="card">
+        <div class= "col-sm-6 mx-auto" class="card mt-5" style="background-color: rgb(255, 255, 255, 0.5) ;">
             <div class="card-body">
               <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
               <p>
                 <strong>nombre</strong> : <%= user.local.name %> <br>
                 <strong>email</strong> : <%= user.local.email %> <br>
-                <strong>fecha de nacimento</strong> : <%= user.local.nacimiento %>
-                <strong>creditos:</strong> : <%= user.local.credits %>
+                <strong>fecha de nacimento</strong> : <%= user.local.nacimiento %> <br>
+                <strong>creditos:</strong> : <%= user.local.credits %> <br>
               </p>
               <a href="/logout" class="btn btn-light btn-sm">
                 Cerrar sesión
               </a>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </body>
