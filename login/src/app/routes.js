@@ -68,6 +68,11 @@ module.exports = (app, passport) => {
         })
     })
 
+    app.post("/expediente", passport.authenticate("local-login", {
+        successRedirect: "/principal",
+        failureRedirect: "/login",
+        failureFlash: true
+    }));
 
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
