@@ -1,19 +1,34 @@
-const passport = require("passport");
-const express = require("express");
 const multer = require("multer");
 const User = require("../app/models/user");
-const app2 = express();
+const path = require("path")
+const pdfs = "../public/pdfs/";
 
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, '../login/src/public/pdfs/');
+        cb(null, pdfs);
      },
     filename: function (req, file, cb) {
-        cb(null , file.originalname);
+        cb(null, file.fieldname + "-" + Date.now()+".pdf");
     }
 });
 
-var upload = multer({ storage: storage })
+var upload = multer({ storage: storage,
+    fileFilter: function (req, file, cb){ 
+        // Set the filetypes, it is optional 
+        var filetypes = /pdf/; 
+        var mimetype = filetypes.test(file.mimetype); 
+  
+        var extname = filetypes.test(path.extname( 
+                    file.originalname).toLowerCase()); 
+        
+        if (mimetype && extname) { 
+            return cb(null, true); 
+        } 
+      
+        cb("Error: File upload only supports the "
+                + "following filetypes - " + filetypes); 
+      }  
+}).single("expediente");
 
 module.exports = (app, passport) => {
     app.get("/", (req, res) => {
@@ -68,11 +83,18 @@ module.exports = (app, passport) => {
         })
     })
 
-    app.post("/expediente", passport.authenticate("local-login", {
-        successRedirect: "/principal",
-        failureRedirect: "/login",
-        failureFlash: true
-    }));
+    app.post("/expediente", function(req, res, next) {
+        console.log("Llego");
+        upload(req,res,function(err) {
+            if(err) {
+                res.send(err);
+                res.redirect("/principal");
+            } else {
+                console.log("Subido");
+                res.redirect("/profile");
+            }
+        })
+    })
 
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
@@ -89,16 +111,6 @@ module.exports = (app, passport) => {
         res.render("principal");
     });
 };
-
-app2.post("/expediente", upload.single("expediente"), (req, res, next) => {
-    const file = req.file
-    if (!file) {
-        const error = new Error('Please upload a file')
-        error.httpStatusCode = 400
-        return next(error)
-    }
-    res.send(file)
-})
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
