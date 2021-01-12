@@ -33,17 +33,7 @@ module.exports = function (passport) {
                 newUser.local.name = req.body.name;
                 newUser.local.nickname = req.body.nickname;
                 newUser.local.nacimento = req.body.date;
-                var storage = multer.diskStorage({
-                    destination: function(req2, file, cb) {
-                        cb(null, '../login/src/public/pdfs/');
-                     },
-                    filename: function (req3, file, cb) {
-                        cb(null , req.body.name + ".pdf");
-                    }
-                });
-                var upload = multer({ storage: storage })
-                
-
+                newUser.credits = 0;
                 newUser.save(function (error) {
                     if (error) {throw error;}
                     return done(null, newUser);
@@ -72,6 +62,7 @@ module.exports = function (passport) {
 
 
 }
+
 
 function parseCredits(file) {
     let pdfParser = new PDFParser(this, 1);

@@ -1,4 +1,19 @@
 const passport = require("passport");
+const express = require("express");
+const multer = require("multer");
+const User = require("../app/models/user");
+const app2 = express();
+
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, '../login/src/public/pdfs/');
+     },
+    filename: function (req, file, cb) {
+        cb(null , file.originalname);
+    }
+});
+
+var upload = multer({ storage: storage })
 
 module.exports = (app, passport) => {
     app.get("/", (req, res) => {
@@ -53,6 +68,7 @@ module.exports = (app, passport) => {
         })
     })
 
+
     app.get("/profile", isLoggedIn, (req, res) => {
         res.render("profile", {
             user: req.user
@@ -68,6 +84,16 @@ module.exports = (app, passport) => {
         res.render("principal");
     });
 };
+
+app2.post("/expediente", upload.single("expediente"), (req, res, next) => {
+    const file = req.file
+    if (!file) {
+        const error = new Error('Please upload a file')
+        error.httpStatusCode = 400
+        return next(error)
+    }
+    res.send(file)
+})
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
