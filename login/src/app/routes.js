@@ -1,7 +1,7 @@
 const multer = require("multer");
 const User = require("../app/models/user");
 const path = require("path")
-const pdfs = "../public/pdfs/";
+const pdfs = "pdfs";
 
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -88,7 +88,7 @@ module.exports = (app, passport) => {
         upload(req,res,function(err) {
             if(err) {
                 res.send(err);
-                res.redirect("/principal");
+                res.redirect("/principal"); 
             } else {
                 console.log("Subido");
                 res.redirect("/profile");
