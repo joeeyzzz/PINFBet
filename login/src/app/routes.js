@@ -1,6 +1,7 @@
 const multer = require("multer");
 const User = require("../app/models/user");
-const path = require("path")
+const path = require("path");
+const user = require("../app/models/user");
 const pdfs = "pdfs";
 
 var storage = multer.diskStorage({
@@ -85,11 +86,12 @@ module.exports = (app, passport) => {
 
     app.post("/expediente", function(req, res, next) {
         console.log("Llego");
-        upload(req,res,function(err) {
-            if(err) {
-                res.send(err);
+        upload(req,res,function(err2) {
+            if(err2) {
+                res.send(err2);
                 res.redirect("/principal"); 
             } else {
+                user.local.credits = 60;
                 console.log("Subido");
                 res.redirect("/profile");
             }
