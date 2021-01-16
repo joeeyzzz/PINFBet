@@ -18,6 +18,10 @@
         <a href="/principal" style="font-size: x-large; position: relative; left: 38cm; top: -3cm; font-weight: bold; color: white;  margin-left: 7px; text-decoration: none;"> Volver</a>
     </div>
     <form action="/expediente" enctype="multipart/form-data" method="post">
+        <div class= "form-group" style="width: 5cm; position: relative; left: 18cm;">
+            <label for="nickname"> Introduzca su usuario </label>
+            <input type="nickname" name="nickname" class="form-control" placeholder="Introduzca usuario" required>
+        </div>
         <div class="drag-drop" style="margin-top: 0.5cm;">
             <input type="file" multiple="multiple" name="expediente" required />
             <span class="fa-stack fa-2x">
