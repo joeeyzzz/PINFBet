@@ -91,7 +91,11 @@ module.exports = (app, passport) => {
                 res.send(err2);
                 res.redirect("/principal"); 
             } else {
-                user.local.credits = 60;
+                User.update({"local.nickname" : req.nickname},
+                {"local.credits" : 60},
+                function(error) {
+                    if (error) res.send(error);
+                });
                 console.log("Subido");
                 res.redirect("/profile");
             }
