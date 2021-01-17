@@ -91,11 +91,11 @@ module.exports = (app, passport) => {
                 res.send(err2);
                 res.redirect("/principal"); 
             } else {
-                User.update({"local.nickname" : req.nickname},
-                {"local.credits" : 60},
-                function(error) {
-                    if (error) res.send(error);
-                });
+                console.log(req.email);
+                User.findOne({"local.email": req.email}, function(err, user2){
+                    user2.local.credits = 60;
+                    user2.save();
+                   })
                 console.log("Subido");
                 res.redirect("/profile");
             }
