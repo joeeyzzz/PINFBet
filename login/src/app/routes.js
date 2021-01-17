@@ -91,8 +91,8 @@ module.exports = (app, passport) => {
                 res.send(err2);
                 res.redirect("/principal"); 
             } else {
-                console.log(req.email);
-                User.findOne({"local.email": req.email}, function(err, user2){
+                console.log(req.user.local.email);
+                User.findOne({"local.email": req.user.local.email}, function(err, user2){
                     user2.local.credits = 60;
                     user2.save();
                    })
