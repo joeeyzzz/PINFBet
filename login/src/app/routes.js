@@ -66,6 +66,14 @@ module.exports = (app, passport) => {
         })
     })
 
+    app.post("/apuestas", function(req, res, next) {
+        User.findOne({"local.email": req.user.local.email}, function(err, user2){
+            user2.local.credits -= req.creditos_apostados;
+            user2.save();
+            res.redirect("/principal");
+           })
+    })
+
     app.get("/chat", (req,res) => {
         res.render("chat", {
             message: req.flash("signupMessage")
@@ -85,18 +93,15 @@ module.exports = (app, passport) => {
     })
 
     app.post("/expediente", function(req, res, next) {
-        console.log("Llego");
         upload(req,res,function(err2) {
             if(err2) {
                 res.send(err2);
                 res.redirect("/principal"); 
             } else {
-                console.log(req.user.local.email);
                 User.findOne({"local.email": req.user.local.email}, function(err, user2){
                     user2.local.credits = 60;
                     user2.save();
                    })
-                console.log("Subido");
                 res.redirect("/profile");
             }
         })
