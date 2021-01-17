@@ -25,6 +25,14 @@
     <div class="container">
     
         <form action="/apuestas" method="POST">
+            <div class= "form-group" style="position: relative; left: -4cm; top: 0.1cm;">
+                <label for="email"> Correo electrónico </label>
+                <input type="email" name="email" class="form-control" placeholder="Introduzca correo" required>
+                <small id="emailHelp" class="form-text text-muted">Es obligatorio ponerlo para que se procese correctamente su apuesta.</small>
+            </div>
+            <button type="submit" class="btn btn-primary my-1" style="position: relative; right: -26cm; bottom: 2.1cm;">Confirmar</button>
+        </form>
+        <form action="/apuestas" method="POST">
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" style="position: relative; left: -4cm;" for="inlineFormCustomSelect">Asignatura que apuestas que vas a aprobar</label>
