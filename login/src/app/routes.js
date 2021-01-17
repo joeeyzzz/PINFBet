@@ -68,7 +68,7 @@ module.exports = (app, passport) => {
 
     app.post("/apuestas", function(req, res, next) {
         User.findOne({"local.email": req.user.local.email}, function(err, user2){
-            user2.local.credits -= req.creditos_apostados;
+            user2.local.credits -= 6;
             user2.save();
             res.redirect("/principal");
            })
